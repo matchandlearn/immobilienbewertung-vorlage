@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Immobilienbewertung</title>
+  <style>
+    body { font-family: Arial, sans-serif; color: #333; max-width: 800px; margin: auto; padding: 20px; }
+    h1 { color: #005A9C; }
+    .section { margin-bottom: 20px; }
+    .label { font-weight: bold; }
+    .value { margin-left: 10px; }
+    hr { border: none; border-top: 1px solid #ccc; margin: 30px 0; }
+  </style>
+</head>
+<body>
+  <img src="{{logoUrl}}" alt="Firmenlogo" style="max-width: 150px;" />
+  <h1>Immobilien-Bewertungsergebnis</h1>
+
+  <!-- 1. Adresse -->
+  <div class="section">
+    <span class="label">Adresse:</span><span class="value">{{Adresse}}</span>
+  </div>
+
+  <!-- 2. Objekttyp -->
+  <div class="section">
+    <span class="label">Objekttyp:</span><span class="value">{{Objekttyp}}</span>
+  </div>
+
+  <!-- 3. Haustyp -->
+  <div class="section">
+    <span class="label">Haustyp:</span><span class="value">{{Haustyp}}</span>
+  </div>
+
+  <!-- 4. Kaufpreis -->
+  <div class="section">
+    <span class="label">Kaufpreis (verlangt):</span><span class="value">{{Kaufpreis}} €</span>
+  </div>
+
+  <!-- 5. Aktuelle Miete -->
+  <div class="section">
+    <span class="label">Aktuelle Miete:</span><span class="value">{{Aktuelle Miete}} €</span>
+  </div>
+
+  <!-- 6. Hausgeld -->
+  <div class="section">
+    <span class="label">Hausgeld:</span><span class="value">{{Hausgeld}} €</span>
+  </div>
+
+  <!-- 7. Rücklagen -->
+  <div class="section">
+    <span class="label">Rücklagen:</span><span class="value">{{Rücklagen}} €</span>
+  </div>
+
+  <!-- 8. Baujahr & Sanierung -->
+  <div class="section">
+    <span class="label">Baujahr:</span><span class="value">{{Baujahr}}</span><br/>
+    <span class="label">Sanierungsjahr:</span><span class="value">{{Sanierungsjahr}}</span>
+  </div>
+
+  <!-- 9. Bauweise & Sanierung -->
+  <div class="section">
+    <span class="label">Bauweise:</span><span class="value">{{Bauweise}}</span><br/>
+    <span class="label">Sanierung:</span><span class="value">{{Sanierung}}</span>
+  </div>
+
+  <!-- 10. Flächen -->
+  <div class="section">
+    <span class="label">Grundstücksgröße:</span><span class="value">{{Grundstücksgröße}} m²</span><br/>
+    <span class="label">Wohnfläche:</span><span class="value">{{Wohnfläche}} m²</span><br/>
+    <span class="label">Nutzfläche:</span><span class="value">{{Nutzfläche}} m²</span>
+  </div>
+
+  <!-- 11. Räume -->
+  <div class="section">
+    <span class="label">Zimmer (W/S/K/B/Z/…) :</span><span class="value">{{Zimmerübersicht}}</span>
+  </div>
+
+  <!-- 12. Ausstattungen -->
+  <div class="section">
+    <span class="label">Einbauküche:</span><span class="value">{{Einbauküche}}</span><br/>
+    <span class="label">Kamin:</span><span class="value">{{Kamin}}</span><br/>
+    <span class="label">Bodenbelag:</span><span class="value">{{Bodenbelag}}</span><br/>
+    <span class="label">Wandbelag:</span><span class="value">{{Wandbelag}}</span><br/>
+    <span class="label">Badezimmer:</span><span class="value">{{Badezimmer}}</span>
+  </div>
+
+  <!-- 13. Energie & Technik -->
+  <div class="section">
+    <span class="label">Heizsystem:</span><span class="value">{{Heizsystem}}</span><br/>
+    <span class="label">Verglasung:</span><span class="value">{{Verglasung}}</span><br/>
+    <span class="label">Dämmung:</span><span class="value">{{Dämmung}}</span><br/>
+    <span class="label">Energieeffizienzklasse:</span><span class="value">{{Energieeffizienz}}</span>
+  </div>
+
+  <!-- 14. Außenbereich & Parken -->
+  <div class="section">
+    <span class="label">Außenbereiche:</span><span class="value">{{Außenbereich}}</span><br/>
+    <span class="label">Parkmöglichkeiten (Carport etc.):</span><span class="value">{{Parkmöglichkeiten}}</span>
+  </div>
+
+  <!-- 15. Bewertungen -->
+  <div class="section">
+    <span class="label">Gesamteindruck:</span><span class="value">{{Gesamteindruck}} / 10</span><br/>
+    <span class="label">Defizite:</span><span class="value">{{Defizite}}</span>
+  </div>
+
+  <!-- 16. Realwert-Berechnung -->
+  <div class="section">
+    <span class="label">Realwert (Fläche × Preis/m²):</span><span class="value">{{Realwert}} €</span>
+  </div>
+
+  <hr/>
+
+  <!-- 17. Zusammenfassung -->
+  <div class="section">
+    <h2>Zusammenfassung</h2>
+    <p>{{Zusammenfassung}}</p>
+  </div>
+
+  <!-- 18. Footer/ Ansprechpartner -->
+  <div class="section" style="margin-top: 30px;">
+    <p>Empfohlen von:</p>
+    <img src="{{agentBildUrl}}" alt="Ansprechpartner" style="max-width: 100px; border-radius: 50%;" /><br/>
+    <strong>{{agentName}}</strong><br/>
+    <span>{{agentKontakt}}</span>
+  </div>
+</body>
+</html>
